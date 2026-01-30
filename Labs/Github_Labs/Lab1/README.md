@@ -176,3 +176,5 @@ Please refer [this](https://github.com/raminmohammadi/MLOps/blob/main/Github_Lab
 - Run unittests: In this step, the unittest tests are executed using the command python -m unittest test.test_unittest. It runs the unittest test suite defined in the test.test_unittest module.
 - Notify on success: This step uses conditional logic with if: success() to check if all the unittest tests passed successfully. If they did, it runs the message "Unit tests passed successfully."
 - Notify on failure: Similarly, this step uses conditional logic with if: failure() to check if any of the unittest tests failed. If any test failed, it runs the message "Unit tests failed."
+- Verified pytest and unittest workflows.
+
