@@ -13,31 +13,31 @@ jobs:
         working-directory: Labs/Github_Labs/Lab1
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: "3.8"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.8"
 
-    - name: Install dependencies
-      run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-    - name: Run tests and generate XML report
-      run: pytest --junitxml=pytest-report.xml
+      - name: Run pytest and generate XML report
+        run: pytest --junitxml=pytest-report.xml
 
-    - name: Upload test results
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: Labs/Github_Labs/Lab1/pytest-report.xml
+      - name: Upload pytest results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-results
+          path: pytest-report.xml
 
-    - name: Notify on success
-      if: success()
-      run: echo "Tests passed successfully"
+      - name: Notify on success
+        if: success()
+        run: echo "Pytest passed successfully"
 
-    - name: Notify on failure
-      if: failure()
-      run: echo "Tests failed"
+      - name: Notify on failure
+        if: failure()
+        run: echo "Pytest failed"
