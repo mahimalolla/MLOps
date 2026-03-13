@@ -1,0 +1,5 @@
+2026-03-13 18:20:20,641 - ml_pipeline - INFO - Loading Iris dataset
+2026-03-13 18:20:20,654 - ml_pipeline - INFO - Dataset shape: X=(150, 4), y=(150,)
+2026-03-13 18:20:20,669 - ml_pipeline - INFO - Performed train-test split
+2026-03-13 18:20:20,675 - ml_pipeline - INFO - Training RandomForestClassifier
+2026-03-13 18:20:21,550 - ml_pipeline - INFO - Model accuracy: 1.0000
